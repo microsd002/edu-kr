@@ -4,6 +4,9 @@ import java.text.NumberFormat;
 
 public class PointImpl implements Point {
 	NumberFormat nf = NumberFormat.getInstance();
+    //todo: make all fields private
+    //todo: rename all fields in camelCase style
+    //todo: make all fields non-static
 	static Long id_static;
 	static String name_s;
 	static double latitude_s;
@@ -29,8 +32,8 @@ public class PointImpl implements Point {
 		while(a.length()<2){
 			a = a + " ";
 		}
+        //todo: dont use println here
 		System.out.print('|'+ a +'|');
-
 	}
 
 	@Override
@@ -45,6 +48,7 @@ public class PointImpl implements Point {
 			name = name + " ";
 		}
 		name_s=name;
+        //todo: dont use println here
 		System.out.print(name+'|');
 	}
 
@@ -59,6 +63,7 @@ public class PointImpl implements Point {
 		nf.setMaximumFractionDigits(6);
 		nf.setMinimumFractionDigits(6);
 		latitude_s=latitude;
+        //todo: dont use println here
 		System.out.print(nf.format(latitude));
 		System.out.print('|');
 
@@ -75,6 +80,7 @@ public class PointImpl implements Point {
 		nf.setMaximumFractionDigits(6);
 		nf.setMinimumFractionDigits(6);
 		longitude_s=longitude;
+        //todo: dont use println here
 		System.out.print(nf.format(longitude));
 		System.out.print('|');
 
@@ -89,9 +95,9 @@ public class PointImpl implements Point {
 	@Override
 	public void setDescription(String description) {
 		description_s=description;
+        //todo: dont use println here
 		System.out.print(description+'|');
 		System.out.println("");
-		
 	}
 
 }
